@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="w-full overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,62 +15,88 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap"
       rel="stylesheet"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xs: "500px",
+            md: "767px",
+            xl: "1600px",
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-[#000a1a] text-white">
+  <body class="bg-[#000a1a] text-white w-full">
     <main>
       <section
-        class="flex section_2 justify-center h-[60vh] bg-center bg-top bg-contain bg-no-repeat"
+        class="flex section_2 justify-center back bg-center bg-top bg-contain bg-no-repeat"
         style="background-image: url(./assets/img/bg-1.png)"
       >
-        <div class="flex justify-start h-full w-[65rem] mx-auto my-0">
-          <div class="py-[6rem]">
-            <div class="flex w-[50%]">
-              <div class="">
-                <img
-                  class="w-[270px] aspect-auto"
-                  src="./assets/img/logo.png"
-                  alt="logo"
-                />
-                <div class="my-7 leading-9 font-semibold">
-                  <h1 class="text-[36px]">
-                    <span class="text-[#07f08e]">85% dos seus resultados</span>
-                    são fruto de networking e não da sua capacidade técnica.
-                  </h1>
-                  <p class="leading-6 mt-4">
-                    Se torne um profissional em networking e alcance resultados
-                    explosivos se relacionando com as pessoas certas.Se conecte
-                    com qualquer pessoa em qualquer ambiente e faça elas
-                    enxergarem valor em você usando os códigos do networking!
-                  </p>
+        <div
+          class="flex justify-start h-screen w-[65rem] md:ml-20 mx-auto my-0"
+        >
+          <div class="py-[10rem]">
+            <div
+              class="w-[50%] xs:w-full mt-[6rem] xl:mt-[7rem] md:mt-[3.5rem]"
+            >
+              <div class="flex md:justify-start xs:justify-center">
+                <div
+                  class="flex flex-col xs:items-center md:text-left xs:text-center w-[70%]"
+                >
+                  <img
+                    class="w-[270px] xs:w-[350px] aspect-auto"
+                    src="./assets/img/logo.png"
+                    alt="logo"
+                  />
+                  <div class="my-7 leading-9 xs:text-[16px] font-semibold">
+                    <h1 class="text-[36px]">
+                      <span class="text-[#07f08e]"
+                        >85% dos seus resultados</span
+                      >
+                      são fruto de networking e não da sua capacidade técnica.
+                    </h1>
+                    <p class="leading-6 mt-4">
+                      Se torne um profissional em networking e alcance
+                      resultados explosivos se relacionando com as pessoas
+                      certas.Se conecte com qualquer pessoa em qualquer ambiente
+                      e faça elas enxergarem valor em você usando os códigos do
+                      networking!
+                    </p>
+                  </div>
+                  <button
+                    class="md:py-2 py-[.2rem] px-[.2rem] text-[15px] md:[17px] md:px-6 rounded-[10px] btn_hero"
+                  >
+                    <p class="font-semibold">
+                      QUERO SER UM PROFISSIONAL DO NETWORKING!
+                    </p>
+                  </button>
                 </div>
-                <button class="py-2 px-6 rounded-[10px] btn_hero">
-                  <p class="font-semibold">
-                    QUERO SER UM PROFISSIONAL DO NETWORKING!
-                  </p>
-                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
       <div
-        class="absolute top-[33rem] left-[0] w-full h-full bg-transparent bg-[linear-gradient(_180deg,_#000a1a_0%,_rgba(0,_10,_26,_0)_20%)]"
+        class="absolute sep top-[100%] left-[0] w-full h-full bg-transparent bg-[linear-gradient(_180deg,_#000a1a_0%,_rgba(0,_10,_26,_0)_20%)]"
       ></div>
       <section
-        class="flex justify-center h-screen bg-center bg-top bg-cover bg-no-repeat w-full"
+        class="flex justify-center bg-center bg-top bg-cover bg-no-repeat w-full"
         style="background-image: url(./assets/img/bg-2.png)"
       >
         <div
-          class="flex flex-col gap-[2rem] items-center h-full w-[43rem] mx-auto my-0 py-[7rem]"
+          class="flex flex-col gap-[2rem] items-center h-full w-[43rem] mx-[1.5rem] my-0 py-[7rem]"
         >
           <h1
-            class="font-light leading-9 text-[36px] text-center text-[#40eeff]"
+            class="font-light leading-9 text-[25px] md:text-[30px] text-center text-[#40eeff]"
           >
             PARA ALGUNS A VIDA É INJUSTA, PARA OUTROS O
             <span class="text-[#07f08e] font-bold">NETWORKING</span> É UM
             HÁBITO.
           </h1>
-          <div class="p-7 rounded-xl bg-[#83838333] flex flex-col gap-[1.5rem]">
+          <div
+            class="p-7 rounded-xl bg-[#83838333] flex flex-col md:gap-[1.5rem] gap-[1rem]"
+          >
             <p>
               Eu já ouvi esse tipo de conversa algumas vezes: “Eu tenho mais
               talento que ele”, “eu tenho mais experiência que ele” ou até pior:
@@ -117,24 +143,21 @@
       </section>
       <section
         class="h-full bg-cover bg-no-repeat w-full bg-bottom pt-[5rem]"
-        style="
-          background-image: url(./assets/img/bg-3.png);
-          background-size: 100%;
-        "
+        style="background-image: url(./assets/img/bg-3.png)"
       >
         <div class="flex flex-col justify-center items-center pb-[3rem]">
           <div
             class="flex flex-col gap-[2rem] items-center h-full w-full mx-auto my-0"
           >
-            <div class="w-[50rem]">
+            <div class="md:w-[50rem]">
               <h1
-                class="font-light leading-9 text-[35px] text-center text-black"
+                class="font-light leading-9 text-[25px] md:text-[35px] text-center text-black"
               >
                 VEJA TODO O CONTEÚDO QUE VOCÊ TERÁ ACESSO DENTRO DO
                 <span class="text-[#0c68ae] font-bold">NETWORKING PRO!</span>
               </h1>
             </div>
-            <div class="flex flex-wrap gap-10">
+            <div class="flex flex-wrap gap-10 justify-center">
               <div
                 class="flex rounded-b-[1rem] border border-[#a4c2de] bg-[#43587b] flex-col"
               >
@@ -241,7 +264,7 @@
                 </ul>
               </div>
             </div>
-            <div class="flex flex-wrap gap-10">
+            <div class="flex flex-wrap justify-center gap-10">
               <div
                 class="flex rounded-b-[1rem] border border-[#a4c2de] bg-[#43587b] flex-col"
               >
@@ -337,8 +360,8 @@
               </h1>
             </div>
           </div>
-          <div class="flex flex-col items-end">
-            <div class="w-[40rem] relative left-[-13rem] top-[0rem]">
+          <div class="flex flex-col mx-[2rem] md:items-end">
+            <div class="text-[12px] md:pl-[20rem] md:w-[90%]">
               <div class="font-[200]">
                 <p class="mb-3">A própria imagem e semelhança do Criador.</p>
                 <p>
@@ -465,9 +488,7 @@
           ></path>
         </svg>
       </section>
-      <div
-        class="absolute top-[275rem] w-full h-full bg-transparent bg-[linear-gradient(_180deg,_#000a1a_0%,_rgba(0,_10,_26,_0)_20%)]"
-      ></div>
+
       <section
         class="bg-top bg-cover bg-no-repeat w-full pt-[7rem]"
         style="background-image: url(./assets/img/bg-2.png)"
@@ -561,7 +582,7 @@
               <a href="">Contato</a>
             </li>
           </ul>
-          <p>
+          <p class="text-center">
             Pablo Marçal 2024 | Todos os direitos reservados CNPJ:
             37676810/0001-72
           </p>
@@ -599,6 +620,15 @@
           #000a1a 0%,
           rgba(0, 10, 26, 0) 20%
         );
+      }
+      @media (max-width: 767px) {
+        .back {
+          background-image: url(./assets/img/bg-hero-mobile.jpg) !important;
+          background-size: 100%;
+        }
+        .sep {
+          top: 100% !important;
+        }
       }
     </style>
   </body>
